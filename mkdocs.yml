@@ -1,0 +1,58 @@
+site_name: PDN Docs
+site_description: Documentation for PDN.
+site_author: Jason Wendt
+copyright: 2023 PDN Docs
+extra:
+  generator: false
+
+  alternate:
+      # Original Language
+    - name: English
+      lang: 'en'
+      link: '%GT_RELATIVE_URL%'  # For relative urls back to original language
+      # Extra languages
+    - name: Norsk
+      lang: 'no'
+      link: 'https://translate.goog/?_x_tr_sl=en&_x_tr_tl=no'
+      # _x_tr_sl = source language
+      # _x_tr_tl = translation language
+theme:
+    name: material
+    icon:
+        logo: material/file-document
+    favicon:
+    font: false
+    features:
+      # - navigation.instant
+        - navigation.tabs
+        - navigation.top
+    palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+    - smarty
+    - admonition
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - pymdownx.keys
+    - toc:
+        permalink: true
+    - md_in_html
+plugins:
+    - search
+    - git-revision-date-localized:
+        type: date
+    - google-translate
